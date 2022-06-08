@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+
+    {{ $length := len . }}
+    <h3>Length {{$length}}</h3> 
+
+    <table border="1">
+      <tr>
+        <th>Id_course</th>
+        <th>Id_student</th>
+        <th>Id_teacher</th>
+        <th>Name</th>
+      </tr>
+    {{ range . }}
+      <tr>
+        <td>{{.Id}}</td>
+        <td>{{ .Id_student}}</td>
+        <td>{{.Id_teacher}}</td>
+        <td> {{ .Name }} </td>
+      </tr>
+    {{ end }}
+    </table>
+
+    </body>
+</html>

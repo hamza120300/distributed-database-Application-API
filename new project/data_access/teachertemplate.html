@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+
+    {{ $length := len . }}
+    <h3>Length {{$length}}</h3> 
+
+    <table border="1">
+      <tr>
+        <th>Teacher_Id   </th>
+        <th>Name</th>
+      </tr>
+    {{ range . }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> <a href="link?table=Teacher&id={{ .Id }} ">{{ .Name }} </a></td>
+      </tr>
+    {{ end }}
+    </table>
+
+    </body>
+</html>
